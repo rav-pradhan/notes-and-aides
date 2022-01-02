@@ -1,0 +1,24 @@
+.list {
+    &__entry {
+        &--nested {
+            li {                
+                margin: 0;
+                list-style-type: square;
+                max-width: 30ch;
+                padding: var(--s-3) var(--s1);
+                font-size: 1 * 0.92em;
+            }
+        }
+
+        &--selected {
+            background-color: var(--active-colour);
+
+            a {
+                color: var(--background-colour);
+                text-decoration: none;
+                text-decoration-style: none;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.code-line {
+    display: block;
+    width: 100%;
+    font-family: "Inconsolata", sans-serif;
+    background-color: var(--active-colour);
+    color: var(--background-colour);
+    padding: var(--s0);
+    font-weight: 700;
+    font-size: $size-400;
+    overflow-y: scroll;
+}

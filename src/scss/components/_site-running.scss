@@ -1,0 +1,38 @@
+.site-running {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 0;
+
+    a {
+        color: var(--active-colour);
+    }
+
+    &__summary {
+        padding-top: var(--s0);
+
+        @media (min-width: 40em) {
+            padding-top: 0;
+        }
+    }
+
+    &--header {
+        flex-direction: column;
+        border-bottom: 0;
+        padding-bottom: 0;
+        align-items: center;
+        text-align: center;
+
+        @media (min-width: 40em) {
+            flex-direction: row;
+            padding-bottom: var(--s0);
+            border-bottom: 2px dashed var(--active-colour);
+        }
+    }
+
+    &--footer {
+        justify-content: center;
+        border-top: 2px dashed var(--active-colour);
+        padding: 0;
+    }
+}

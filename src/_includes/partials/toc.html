@@ -1,0 +1,10 @@
+<nav class="toc" aria-labelledby="toc-heading">
+    <strong id="toc-heading">Table of Contents</strong>
+    <ol class="stack">
+        {% for entry in tocDetails %}
+        <li>
+            <a href="{{entry.link}}">{{ entry.title }}</a>
+        </li>
+        {% endfor %}
+    </ol>
+</nav>

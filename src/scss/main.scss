@@ -1,0 +1,105 @@
+
+// using css custom properties for dark/light mode. Further research in due course
+:root {
+    --dark-grey: #444444;
+    --glaceous: #415C62;
+    --grey: #aaa;
+    --off-white: #fff;
+
+    --active-colour: var(--dark-grey);
+    --background-colour: var(--off-white);
+
+    // Spacing
+	--ratio: 1.5;
+	--s-5: calc(var(--s-4) / var(--ratio));
+	--s-4: calc(var(--s-3) / var(--ratio));
+	--s-3: calc(var(--s-2) / var(--ratio));
+	--s-2: calc(var(--s-1) / var(--ratio));
+	--s-1: calc(var(--s0) / var(--ratio));
+	--s0: 1rem;
+	--s1: calc(var(--s0) * var(--ratio));
+	--s2: calc(var(--s1) * var(--ratio));
+	--s3: calc(var(--s2) * var(--ratio));
+	--s4: calc(var(--s3) * var(--ratio));
+	--s5: calc(var(--s4) * var(--ratio));
+
+    // Typography
+	--base: 1rem;
+
+	--size-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
+	--size-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+	--size-500: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+	--size-600: clamp(1.37rem, 1.21rem + 0.8vw, 1.78rem);
+	--size-700: clamp(1.71rem, 1.45rem + 1.29vw, 2.37rem);
+	--size-800: clamp(2.14rem, 1.74rem + 1.99vw, 3.16rem);
+	--size-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
+	--size-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --active-colour: var(--off-white);
+        --background-colour: var(--dark-grey);
+    }
+
+}
+
+// variables
+@import "variables/typographyScale";
+@import "typography";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-colour);
+    color: var(--active-colour);
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-size: $size-500;
+}
+
+hr {
+    border: 1px dashed var(--active-colour);
+    margin: var(--s1) 0;
+}
+
+main {
+    margin: 0 auto;
+    padding: 0;
+
+    @media (min-width: 40em) {
+        max-width: 60ch;
+    }
+}
+
+.wrapper {
+    padding-left: var(--s1);
+    padding-right: var(--s1);
+}
+
+// primitives
+@import "primitives/stack";
+@import "primitives//sidebar";
+
+// components
+@import "components/site-running";
+@import "components/code-line";
+@import "components/adjacent-chapters";
+@import "components/toc";
+@import "components/collapsible";
+@import "components/topics";
+@import "components/list";
+@import "components/warning";
+
+// utilities
+@import "utilities/skipLink";
+
+.article {
+    > :is(h2, h3) {
+        --space: var(--size-900);
+    }
+
+    > :is(h2, h3) + * {
+        --space: var(--size-400);
+    }
+}

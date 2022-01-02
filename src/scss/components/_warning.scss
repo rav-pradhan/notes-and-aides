@@ -1,0 +1,27 @@
+.warning {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: var(--s-1);
+
+    &__icon {
+        display: inline-block;
+        position: absolute;
+        line-height: 34px;
+        border-radius: 50%;
+        left: 0;
+        background-color: var(--active-colour);
+        color: var(--background-colour);
+        height: 35px;
+        width: 35px;
+        font-size: $size-600;
+        font-weight: 700;
+        text-align: center;
+        align-self: center;
+    }
+
+    &__text {
+        padding-left: var(--s2);
+        line-height: 1.3;
+    }
+}

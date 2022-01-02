@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<main id="main-content" class="stack stack--margin-lg article">
+    <h1>{{ title }}</h1>
+    {% if tocDetails | length %}
+    {% include "partials/toc.html" %}
+    {% endif %}
+    {{ content | safe }}
+    {% include "partials/adjacentChapters.html" %}
+</main>
+{% endblock %}
