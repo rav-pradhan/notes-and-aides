@@ -4,7 +4,7 @@
     border-right: 0;
     min-height: 0;
     overflow-y: scroll;
-    width: 100%;    
+    width: 100%;
 
     @media (min-width: 40em) {
         border-bottom: 0;
@@ -20,10 +20,9 @@
 
     &__details {
         padding: var(--s0) 0;
-        font-size: $size-500;
+        font-size: $size-400;
         cursor: pointer;
-    border-top: 2px solid var(--active-colour);
-
+        border-top: 2px solid var(--active-colour);
 
         @media (min-width: 40em) {
             padding: var(--s0) 0 0 0;

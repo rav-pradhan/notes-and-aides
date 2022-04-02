@@ -1,28 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap");
 h1,
 h2,
 h3,
 h4 {
-	font-family: "Inconsolata", sans-serif;
+	font-family: Lora, "serif";
+	font-weight: normal;
 }
 
 h1 {
 	font-size: $size-700;
 	margin: 0 0 2rem 0;
 	max-width: 25ch;
+	letter-spacing: 2px;
 }
 
 h2 {
 	margin-top: var(--s3);
 	font-size: $size-600;
 	max-width: 40ch;
+	letter-spacing: 1.5px;
 }
 
 h3 {
 	margin-top: var(--s2);
 	font-size: $size-500;
 	max-width: 40ch;
+	letter-spacing: 1.25px;
 }
 
 p {
@@ -52,7 +55,7 @@ li {
 a {
 	color: var(--active-colour);
 	text-decoration-style: solid;
-	text-underline-offset: .2em;
+	text-underline-offset: 0.2em;
 	&:hover {
 		text-decoration-style: dashed;
 	}
@@ -69,7 +72,7 @@ a {
 
 code {
 	font-family: "SF Mono", menlo, inconsolata, monospace;
-	font-size: $size-400 * .8;
+	font-size: $size-400 * 0.8;
 	color: var(--background-colour) !important;
 	background-color: var(--active-colour) !important;
 	padding: 0.2rem 0.4rem;
