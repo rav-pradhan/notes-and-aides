@@ -7,10 +7,6 @@
         display: flex;
         flex-wrap: wrap;
         margin: calc(var(--s2) / 2 * -1);
-
-        @media (max-width: 40em) {
-            flex-direction: column;
-        }
     }
 
     > * > * {
