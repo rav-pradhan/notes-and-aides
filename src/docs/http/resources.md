@@ -6,7 +6,7 @@ metaDescription: "Resources"
 syntaxHighlights: true
 ---
 
-Resources are exactly that - something that we can access on the web.
+Resources are things that we can access on the web.
 
 If I want to see what's going on in the world today, I might go onto the BBC website. The address might be `https://bbc.co.uk`.
 

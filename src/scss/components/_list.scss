@@ -1,7 +1,7 @@
 .list {
     &__entry {
         &--nested {
-            li {                
+            li {
                 margin: 0;
                 list-style-type: square;
                 max-width: 30ch;
@@ -11,14 +11,13 @@
         }
 
         &--selected {
-            background-color: var(--active-colour);
+            background-color: var(--accent);
 
             a {
                 color: var(--background-colour);
                 text-decoration: none;
                 text-decoration-style: none;
             }
-
         }
     }
 }

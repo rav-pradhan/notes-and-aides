@@ -58,15 +58,17 @@ a {
 	text-underline-offset: 0.2em;
 	&:hover {
 		text-decoration-style: dashed;
+		color: var(--accent);
 	}
 
 	&:focus {
 		text-decoration-style: none;
 		text-decoration: none;
-		background-color: var(--active-colour);
+		background-color: var(--accent);
 		color: var(--background-colour) !important;
 		outline: none;
 		box-shadow: 0px 0px 2px var(--active-colour);
+		padding: 2px;
 	}
 }
 

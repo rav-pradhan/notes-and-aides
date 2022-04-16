@@ -1,7 +1,7 @@
 .collapsible {
     display: inline-block;
-    border-bottom: 1px solid var(--active-colour);
-    border-top: 1px solid var(--active-colour);
+    border-bottom: 1px solid var(--accent);
+    border-top: 1px solid var(--accent);
     padding: var(--s1) 0;
     width: 100%;
     margin-top: var(--s3);
@@ -9,14 +9,14 @@
     & + &:not(:first-child) + &:not(:last-child) + .collapsible {
         // override any margins applied externally (e.g. from stack primitive)
         margin: 0 !important;
-        border-bottom: 1px solid var(--active-colour);
+        border-bottom: 1px solid var(--accent);
         border-top: none;
     }
 
     & + .collapsible {
         // override any margins applied externally (e.g. from stack primitive)
         margin: 0 !important;
-        border-bottom: 1px solid var(--active-colour);
+        border-bottom: 1px solid var(--accent);
         border-top: none;
     }
 

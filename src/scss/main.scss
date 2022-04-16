@@ -1,11 +1,12 @@
 // using css custom properties for dark/light mode. Further research in due course
 :root {
     --dark-grey: #444444;
-    --glaceous: #415c62;
+    --green: #26826b;
     --grey: #aaa;
     --off-white: #fff;
 
     --active-colour: var(--dark-grey);
+    --accent: var(--green);
     --background-colour: var(--off-white);
 
     // Spacing
@@ -50,7 +51,7 @@ body {
 }
 
 hr {
-    border: 1px dashed var(--active-colour);
+    border: 1px dashed var(--accent);
     margin: var(--s1) 0;
 }
 
