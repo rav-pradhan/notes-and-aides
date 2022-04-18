@@ -6,11 +6,11 @@
     > * {
         display: flex;
         flex-wrap: wrap;
-        margin: calc(var(--s2) / 2 * -1);
+        margin: calc(var(--s3) / 2 * -1);
     }
 
     > * > * {
-        margin: calc(var(--s2) / 2);
+        margin: calc(var(--s3) / 2);
         flex-grow: 1;
     }
 
