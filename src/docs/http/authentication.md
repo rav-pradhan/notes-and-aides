@@ -107,3 +107,15 @@ There are plenty of benefits to using OpenID/OAuth, but it does introduce comple
 HTTPS uses an `https` scheme in the URL instead of `http`. The default port for HTTP is `443`, instead of `80`.
 
 HTTP works by using an additional security layer in the [network protocol stack](/docs/http/connections/#transport-and-network-layers). This layer exists between the HTTP/TCP layers and uses the **Transport Layer Security** protocol (TLS), or its predecessor, **Secure Sockets Layer** (SSL).
+
+A server needs to have a cryptographic certificate to use HTTPS. This certificate is sent by the server to the client to set up the HTTP communication. The certificate includes the server's host name that a browser can use to validate that the server it is talking to is the correct one.
+
+Validation uses public key cryptography and certificate authorities that will vouch for the certificate's integrity. Administrators need to buy and install certificates from these authorities.
+
+Key points of HTTPS:
+
+- HTTPS encrypts **all** request and response traffic. This includes headers, message body, cookies. HTTPS prevents session hijacking because no one can inspect a message.
+- Server certificates authenticate the server to the client. This means you can be absolutely sure that your HTTP requests and messages are really going to the website you want it to, and not to a man-in-the-middle interceptor who has set up a proxy server on the network.
+- HTTP does not authenticate the client. The web apps client-side still need to implement forms authentication or another protocol if they need to validate the user's identity.
+
+Using HTTPS in conjunction to another authentication, such as basic or forms, makes them more secure because all data is encrypted.
